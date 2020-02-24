@@ -55,11 +55,16 @@
                                     <outletCollection property="gestureRecognizers" destination="40J-1H-RiR" appends="YES" id="sIx-A4-Svn"/>
                                 </connections>
                             </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ahi-0I-x2d" customClass="RatingControl" customModule="FoodTracker" customModuleProvider="target">
+                                <rect key="frame" x="20" y="550" width="374" height="110"/>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="ahi-0I-x2d" firstAttribute="top" secondItem="x82-ko-6Qt" secondAttribute="bottom" constant="8" id="6wG-0i-f9O"/>
                             <constraint firstItem="x82-ko-6Qt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="7qg-p1-oAA"/>
                             <constraint firstItem="Fem-Mm-1cn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="U3a-BK-8R3"/>
+                            <constraint firstItem="ahi-0I-x2d" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="UtC-QN-UrT"/>
                             <constraint firstItem="Fem-Mm-1cn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="XGt-kg-LYY"/>
                             <constraint firstItem="x82-ko-6Qt" firstAttribute="top" secondItem="Fem-Mm-1cn" secondAttribute="bottom" constant="8" id="aQ6-Ft-WGP"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Fem-Mm-1cn" secondAttribute="trailing" constant="20" id="gB2-6f-P1i"/>

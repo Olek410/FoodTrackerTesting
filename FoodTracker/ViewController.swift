@@ -29,12 +29,12 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
         mealNameLabel.text = textField.text
     }
     
+    var imagePicker = UIImagePickerController()
+    
     @IBAction func selectImageFromPhotoLibrary(_ sender: Any) {
-        print("1")
         nameTextField.resignFirstResponder()
         
         if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum){
-            print("Button capture")
             
             imagePicker.delegate = self
             imagePicker.sourceType = .savedPhotosAlbum
@@ -43,13 +43,12 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
             present(imagePicker, animated: true, completion: nil)
         }
     }
-    var imagePicker = UIImagePickerController()
     
     func imagePickerController(picker: UIImagePickerController!, didFinishPickingImage image: UIImage!, editingInfo: NSDictionary!){
         self.dismiss(animated: true, completion: { () -> Void in
             
         })
-        
+        print("1")
         photoImageView.image = image
     }
     
