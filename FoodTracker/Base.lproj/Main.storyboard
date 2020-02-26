@@ -59,6 +59,7 @@
                                     <outlet property="nameLabel" destination="zVW-G6-1m9" id="iYj-KW-exN"/>
                                     <outlet property="photoImageView" destination="ZZx-HU-o1y" id="NNU-1d-oNE"/>
                                     <outlet property="ratingControl" destination="qsc-wp-WLd" id="qW1-Zt-a8P"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="ShowDetail" id="PI3-Di-xPg"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -137,10 +138,14 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="New Meal" id="Qdg-II-T2K">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="RfY-05-nUe"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="RfY-05-nUe">
+                            <connections>
+                                <action selector="cancel:" destination="BYZ-38-t0r" id="7JK-s7-aGb"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="Wg1-aN-X9g">
                             <connections>
-                                <segue destination="8O6-Ch-f2c" kind="unwind" unwindAction="unwindToMealListWithSender:" id="Xio-o8-p5X"/>
+                                <segue destination="8O6-Ch-f2c" kind="unwind" unwindAction="unwindToMealListWithSender:" id="iWD-3g-tgO"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -195,10 +200,13 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rCe-DO-S8Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1047.8260869565217" y="133.92857142857142"/>
+            <point key="canvasLocation" x="1125" y="535"/>
         </scene>
     </scenes>
     <resources>
         <image name="defaultPhoto" width="1080" height="1080"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="PI3-Di-xPg"/>
+    </inferredMetricsTieBreakers>
 </document>
